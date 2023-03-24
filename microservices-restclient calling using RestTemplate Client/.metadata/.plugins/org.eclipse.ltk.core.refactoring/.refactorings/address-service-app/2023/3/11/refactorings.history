@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;AddressResponse.java&apos; to &apos;Real_project_of_Restclient_Calling/src/main/java/com.tathagat.response&apos;&#x0D;&#x0A;- Original project: &apos;address-service-app&apos;&#x0D;&#x0A;- Destination element: &apos;Real_project_of_Restclient_Calling/src/main/java/com.tathagat.response&apos;&#x0D;&#x0A;- Original element: &apos;com.tathagat.response.AddressResponse.java&apos;" description="Copy compilation unit" destination="=Real_project_of_Restclient_Calling/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.tathagat.response" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.tathagat.response{AddressResponse.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1679064964399" units="1" version="1.0"/>
-</session>
