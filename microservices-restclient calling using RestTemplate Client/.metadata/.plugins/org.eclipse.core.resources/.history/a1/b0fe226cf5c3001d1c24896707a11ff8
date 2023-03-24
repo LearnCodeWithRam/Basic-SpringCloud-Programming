@@ -1,0 +1,5 @@
+package com.tathagat.response;
+
+public class AddressResponse {
+
+}

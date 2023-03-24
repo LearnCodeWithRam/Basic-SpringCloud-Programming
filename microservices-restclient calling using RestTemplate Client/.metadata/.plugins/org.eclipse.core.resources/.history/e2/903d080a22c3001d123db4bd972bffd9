@@ -1,0 +1,27 @@
+package com.tathagat.employeeService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.tathagat.Entity.Employee;
+import com.tathagat.employeerepo.EmployeeRepo;
+
+@Service
+public class EmployeeService 
+{
+
+	
+	@Autowired
+	private EmployeeRepo emprepo;
+	
+	
+	@GetMapping(path="/Employees/{id}")
+	public Employee getEmployeeDetails(@PathVariable("id") Integer id)
+	{
+		Employee emp = emprepo.getById(id);
+                return emp;
+		
+	}
+}

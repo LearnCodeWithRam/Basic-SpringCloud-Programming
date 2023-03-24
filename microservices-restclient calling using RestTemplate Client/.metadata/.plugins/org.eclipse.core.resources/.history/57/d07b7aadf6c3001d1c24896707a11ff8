@@ -1,0 +1,5 @@
+package com.tathagat.service;
+
+public class AddressService {
+
+}

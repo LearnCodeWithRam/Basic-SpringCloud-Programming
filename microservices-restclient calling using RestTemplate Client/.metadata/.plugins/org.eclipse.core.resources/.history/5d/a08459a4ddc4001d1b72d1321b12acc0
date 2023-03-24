@@ -1,0 +1,46 @@
+package com.tathagat.employeeService;
+
+import java.util.Optional;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.tathagat.Entity.Employee;
+import com.tathagat.employeerepo.EmployeeRepo;
+import com.tathagat.response.AddressResponse;
+import com.tathagat.response.EmployeeResponse;
+
+@Service
+public class EmployeeService 
+{
+
+	
+	@Autowired
+	private EmployeeRepo emprepo;
+	
+	@Autowired
+	private ModelMapper modelmapper;
+	
+	public EmployeeResponse getEmpById(Integer id)
+	{
+		AddressResponse adresp= new AddressResponse();
+		Employee emp = emprepo.findById(id).get();
+		
+		/** //Manual mapping or automatic mapper,model mapper or any other mapper 
+		EmployeeResponse empresp = new EmployeeResponse();
+		empresp.setId(emp.getId());
+		empresp.setName(emp.getName());
+		empresp.setEmail(emp.getEmail());
+		empresp.setBloodgroup(emp.getBloodgroup());*/
+		
+		//automatic mapping
+		
+		EmployeeResponse empresp = modelmapper.map(emp, EmployeeResponse.class);
+		
+		empresp.setAddressresponse(adresp);
+                return empresp;
+		
+	}
+}

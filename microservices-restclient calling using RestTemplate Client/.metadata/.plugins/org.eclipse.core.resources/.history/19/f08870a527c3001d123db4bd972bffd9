@@ -1,0 +1,27 @@
+package com.tathagat.employeeService;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+import com.tathagat.Entity.Employee;
+import com.tathagat.employeerepo.EmployeeRepo;
+
+@Service
+public class EmployeeService 
+{
+
+	
+	@Autowired
+	private EmployeeRepo emprepo;
+	
+	
+	public Employee getEmpById(Integer id)
+	{
+		Employee emp = emprepo.findById(id).get();
+                return emp;
+		
+	}
+}

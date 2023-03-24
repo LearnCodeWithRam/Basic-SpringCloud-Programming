@@ -1,0 +1,5 @@
+package com.tathagat.employeeConfiguration;
+
+public class EmployeeConfig {
+
+}

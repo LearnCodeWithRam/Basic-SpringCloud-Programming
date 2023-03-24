@@ -1,0 +1,5 @@
+package com.tathagat.employeerepo;
+
+public interface EmployeeRepo {
+
+}
